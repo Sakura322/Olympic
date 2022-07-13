@@ -1,0 +1,10 @@
+@use './generics/variables.scss' as v;
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  color: v.$white;
+  font-family: v.$font-body;
+}

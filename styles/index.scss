@@ -1,5 +1,10 @@
 @use './generics/reset.scss';
+@use './global.scss';
+@use './generics/typo.scss';
+@use './layout/index.scss';
 
 body {
-  color: #000;
+  background-image: url(../assets/images/Image_BG.jpg);
+  background-size: auto;
+  background-position: center;
 }
