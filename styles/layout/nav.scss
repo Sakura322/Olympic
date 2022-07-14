@@ -1,0 +1,65 @@
+@use '../generics/variables.scss' as v;
+
+.nav {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  width: 30rem;
+  height: 30rem;
+
+  position: relative;
+
+  &-tile {
+    height: 30rem;
+    width: 30rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 2px solid #fff;
+
+    &--front {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2rem;
+
+      &__icon {
+        width: 10rem;
+      }
+
+      &__title {
+        font-size: 5rem;
+        font-family: v.$font-display;
+      }
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__title {
+        font-size: 5rem;
+        font-family: v.$font-display;
+      }
+
+      &__lists {
+        font-size: 2rem;
+      }
+    }
+  }
+  &:hover &-tile--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &-tile--back {
+    transform: rotateY(0);
+  }
+}
