@@ -15,25 +15,37 @@
       </h1>
     </div>
     <!-- nav -->
-    <div class="nav">
-      <div class="nav-tile nav-tile--front">
+    <div class="nav" id="navTileContainer"></div>
+    <!-- news -->
+    <section class="news-container">
+      <header class="news-container-header">
+        <h2 class="news-container-header__title">News</h2>
         <img
-          src="./assets/icons/Icon_Services.svg"
+          class="news-container-header__icon"
+          src="assets/icons/Icon_News.svg"
           alt=""
-          class="nav-tile--front__icon"
         />
-        <h2 class="nav-tile--front__title">My Service</h2>
-      </div>
-      <div class="nav-tile nav-tile--back">
-        <h2 class="nav-tile--back__title">My service</h2>
-        <ul class="nav-tile--back__lists">
-          <li><a href="#" class="">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-      </div>
-    </div>
+      </header>
+      <main></main>
+      <footer class="news-container-footer">
+        <button class="news-container-footer__btn">Read more</button>
+      </footer>
+    </section>
+    <!-- my to dos -->
+    <section class="todo-container">
+      <header class="todo-container-header">
+        <h2 class="todo-container-header__title">My To Dos</h2>
+        <img
+          class="todo-container-header__icon"
+          src="assets/icons/Icon_To-Dos.svg"
+          alt=""
+        />
+      </header>
+      <main></main>
+      <footer class="todo-container-footer">
+        <button class="todo-container-footer__btn">View all to dos</button>
+      </footer>
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -2,10 +2,11 @@
 @use './global.scss';
 @use './generics/typo.scss';
 @use './layout/index.scss';
+@use './layout/news.scss';
+@use './layout/todo.scss';
 
 body {
   background-image: url(../assets/images/Image_BG.jpg);
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

@@ -1,16 +1,31 @@
 @use '../generics/variables.scss' as v;
 
 .nav {
+  margin-left: 2rem;
+  margin-right: 2rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  width: 30rem;
-  height: 30rem;
+  display: flex;
+  overflow-x: scroll;
+  gap: 2rem;
 
-  position: relative;
+  &-tile-wrapper {
+    height: 30rem;
+    min-width: 30rem;
+    position: relative;
+
+    &:hover .nav-tile--front {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover .nav-tile--back {
+      transform: rotateY(0);
+    }
+  }
 
   &-tile {
-    height: 30rem;
-    width: 30rem;
+    height: 100%;
+    width: 100%;
     transition: all 0.3s ease;
     overflow: hidden;
     position: absolute;
@@ -54,12 +69,5 @@
         font-size: 2rem;
       }
     }
-  }
-  &:hover &-tile--front {
-    transform: rotateY(-180deg);
-  }
-
-  &:hover &-tile--back {
-    transform: rotateY(0);
   }
 }

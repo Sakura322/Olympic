@@ -1,0 +1,40 @@
+@use "../generics/variables.scss" as v;
+
+.news-container {
+  padding: 4.3rem 4rem;
+  border: 0.3rem v.$white solid;
+
+  &-header {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+      margin: 0;
+      font-size: 5rem;
+      font-family: v.$font-display;
+    }
+
+    &__icon {
+      height: 5.5rem;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    &__btn {
+      border: 0.3rem v.$white solid;
+      min-width: 21rem;
+      padding: 1.2rem 1.4rem;
+      background-color: transparent;
+      font-size: 1.8rem;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(0.8);
+        transition-duration: 0.2s;
+      }
+    }
+  }
+}
